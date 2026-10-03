@@ -2222,6 +2222,12 @@
   .view-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); }
   .view-bar .select-wrap select { min-width: 280px; max-width: 100%; font-weight: 600; border-color: var(--hairline-strong); }
   .setlist-mode .view-bar .select-wrap select { border-color: var(--accent); background: var(--accent-dim); color: var(--accent-2); }
+  /* The native dropdown copies the <select> colors: give every list the same dark look,
+     whether or not a setlist is active (and for the sort selector too) */
+  select { color-scheme: dark; }
+  .select-wrap select option, .select-wrap select optgroup { background-color: var(--surface-1); color: var(--fg); }
+  .select-wrap select optgroup { color: var(--fg-dim); font-style: normal; }
+  .select-wrap select option:checked { background-color: var(--surface-3); color: var(--accent-2); }
   .view-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .view-actions:empty { display: none; }
   .setlist-mode .toolbar > .select-wrap { display: none; }
